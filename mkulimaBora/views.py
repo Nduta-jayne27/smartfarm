@@ -22,7 +22,6 @@ def jc(request):
 			print( hum + temp)
 		else:
 			print('Failed to get reading. Try again!')
-		time.sleep(3)
 
 	return render(request,'index.html',{'hum':hum,'temp':temp})
 def kc(request):
