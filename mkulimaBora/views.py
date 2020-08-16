@@ -13,6 +13,8 @@ pin=4
 # Create your views here.
 def jc(request):
 	if request.method == 'GET':
+		hum=""
+		temp=""
 		humidity,temparature=Adafruit_DHT.read(sensor,pin)
 		if humidity is not None and temparature is not None:
 			hum= '{0:0.1f}%'.format(humidity)
