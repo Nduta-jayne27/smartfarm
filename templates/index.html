@@ -34,7 +34,7 @@
           <a class="nav-link" href="{% url 'status' %}">Farm Status</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'admin' %}">Admin</a>
+          <a class="nav-link" href="/admin/">Admin</a>
         </li>
       </ul>
     </div>
@@ -83,8 +83,8 @@
   </div>
 </div>
 
-<script type="text/javascript" src="bs/js/jquery.js"></script>
-<script type="text/javascript" src="bs/js/Bootstrap.js"></script>
+<script type="text/javascript" src="{% static 'bs/js/jquery.js' %}"></script>
+<script type="text/javascript" src= "{% static 'bs/js/bootstrap.min.js' %}"></script>
 
 </body>
 </html>

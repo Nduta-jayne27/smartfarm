@@ -18,7 +18,7 @@ from django.urls import path
 from mkulimaBora.views import jc
 from mkulimaBora.views import kc
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',jc),
-    path('irrigate',kc)
+    path('admin/', admin.site.urls,name='admin'),
+    path('',jc,name='home'),
+    path('irrigate',kc,name='status')
 ]
