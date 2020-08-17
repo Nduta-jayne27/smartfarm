@@ -1,13 +1,114 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="1">
-	<title>Mkulima Bora| Irrigate</title>
+
+   <link rel="stylesheet" type="text/css" href="{% static 'bs/css/bootstrap.min.css' %}">
+  <title>SmartFarm Technologies</title>
 </head>
 <body>
-<p>{{msg}}</P>
-<p>{{hum}}</P>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" >
+  <div class="container">
+    <a class="navbar-brand" href="#">SmartFarm Technologies</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'status' %}">Farm Status</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin/">Admin</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class='container jumbotron' style="margin-top: 70px;margin-bottom: 70px; ">
+
+<div class="col-lg-4" style="margin-bottom: 10px;">
+  <div class="card border-success">
+    <div class="card-header">
+         <h3 class="card-title">
+            <p  class="text-center">Water Level</p>
+             
+             </h3>
+
+        </div>
+    
+  <div class="card-body ">
+    <p>{{msg}}</P>
+  </div>
+  <div class="card-footer bg-info">
+     
+    
+  </div>
+</div>
+
+</div>
+<div class="col-lg-4" style="margin-bottom: 10px;">
+  <div class="card border-success">
+    <div class="card-header">
+         <h3 class="card-title">
+            <p  class="text-center">Temparature in Degrees Celcius</p>
+             
+             </h3>
+
+        </div>
+    
+  <div class="card-body ">
+    
 <p>{{temp}}</P>
+  </div>
+  <div class="card-footer bg-info">
+     
+    
+  </div>
+</div>
+
+</div>
+<div class="col-lg-4" style="margin-bottom: 10px;">
+  <div class="card border-success">
+    <div class="card-header">
+         <h3 class="card-title">
+            <p  class="text-center">Humidity Percentage</p>
+             
+             </h3>
+
+        </div>
+    
+  <div class="card-body ">
+    <p>{{hum}}</P>
+  </div>
+  <div class="card-footer bg-info">
+     
+    
+  </div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+<!-- Page Content -->
+<div class="py-2 bg-dark fixed-bottom">
+  <div class="container">
+    <p style="text-align:center; color: white;">&copy;
+           {% now 'Y' %} SmartFarm Technologies</p>
+  </div>
+</div>
+
+<script type="text/javascript" src="{% static 'bs/js/jquery.js' %}"></script>
+<script type="text/javascript" src= "{% static 'bs/js/bootstrap.min.js' %}"></script>
 
 </body>
 </html>
+
